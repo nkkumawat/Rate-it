@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sonu.rateit.rateTeacher">
+
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentStart="true">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="8000dp"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_alignParentStart="true">-->
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/textView2"
+                android:layout_marginTop="18dp"
+                android:text="Teaching"
+                android:textSize="20sp" />
+
+            <RatingBar
+                android:id="@+id/rateTeaching"
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:layout_alignStart="@+id/textView"
+                android:layout_below="@+id/textView"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:theme="@style/RatingBar" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView4"
+                android:layout_below="@+id/rateTeaching"
+                android:layout_marginTop="10dp"
+                android:text="Teaching2"
+                android:textSize="20sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignStart="@+id/textView2"
+                android:layout_below="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ratingBar"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="10dp"
+                android:text="Teaching3"
+                android:textSize="20sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar3"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignStart="@+id/textView4"
+                android:layout_below="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/textView4"
+                android:layout_below="@+id/ratingBar3"
+                android:layout_marginTop="10dp"
+                android:text="Teaching4"
+                android:textSize="20sp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar4"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignStart="@+id/textView5"
+                android:layout_below="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ratingBar4"
+        android:layout_below="@+id/ratingBar4"
+        android:layout_marginTop="17dp"
+        android:text="Teaching5"
+        android:textSize="20sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar7"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/textView11"
+        android:layout_alignStart="@+id/textView11" />
+
+
+    <!--</RelativeLayout>-->
+
+
+    <!--</ScrollView>-->
+
+
+</RelativeLayout>
