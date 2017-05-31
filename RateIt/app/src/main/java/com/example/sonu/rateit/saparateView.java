@@ -6,6 +6,8 @@ import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,6 +23,7 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 
 //import okhttp3.Cache;
 import okhttp3.Cache;
@@ -32,7 +35,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class saparateView extends AppCompatActivity {
-    TextView id1, name1 , phone1 , about1 , experience1 , email1 , points1, department1 , qualification1, rateIT;
+    TextView id1, name1 , phone1 , about1 , experience1 , email1 , points1, department1 , qualification1;
     ImageView picture1;
     String experience , phone , about  , url , id , name , qualification , email , points , department , picture;
     @Override
@@ -53,7 +56,6 @@ public class saparateView extends AppCompatActivity {
          department = bundle.getString("department");
 //        String picture = bundle.getString("picture");
 
-
         id1 = (TextView)findViewById(R.id.id1);
         id1 = (TextView)findViewById(R.id.id1);
         name1 = (TextView)findViewById(R.id.teacherName1);
@@ -64,7 +66,7 @@ public class saparateView extends AppCompatActivity {
         email1 = (TextView)findViewById(R.id.email1);
         points1 = (TextView)findViewById(R.id.points1);
         department1 = (TextView)findViewById(R.id.department1);
-        rateIT = (TextView)findViewById(R.id.RateIT);
+
 
         picture1 = (ImageView)findViewById(R.id.profilePic1);
 
@@ -75,16 +77,6 @@ public class saparateView extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-        rateIT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext() , rateTeacher.class));
-            }
-        });
-
-
     }
     void run() throws IOException {
         OkHttpClient client = new OkHttpClient();
@@ -98,9 +90,7 @@ public class saparateView extends AppCompatActivity {
             }
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-
                 final String myResponse = response.body().string();
-
                 saparateView.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -111,7 +101,12 @@ public class saparateView extends AppCompatActivity {
                             experience = jsonObject.getString("experience");
                             about = jsonObject.getString("about");
                             phone = jsonObject.getString("phone");
-                            picture = jsonObject.getString("picture");
+                            //name = jsonObject.getString("name");
+//                            department= jsonObject.getString("department");
+//                            qualification= jsonObject.getString("qualification");
+//                            email= jsonObject.getString("email");
+                            points= jsonObject.getString("points");
+                            picture= jsonObject.getString("picture");
                             setAlltext();
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -139,5 +134,31 @@ public class saparateView extends AppCompatActivity {
                 .error(R.drawable.placeholder)
                 .into(picture1);
 
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.rateme: {
+                Intent intent = new Intent(getApplicationContext() , rateTeacher.class);
+                intent.putExtra("id" , id);
+                startActivity(intent);
+//                finish();
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        try {
+            run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

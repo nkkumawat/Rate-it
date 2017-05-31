@@ -146,15 +146,4 @@
 
     </ScrollView>
 
-    <TextView
-        android:id="@+id/RateIT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="88dp"
-        android:text="Rate IT"
-        android:textSize="30sp"
-        android:textStyle="bold|italic" />
-
 </RelativeLayout>

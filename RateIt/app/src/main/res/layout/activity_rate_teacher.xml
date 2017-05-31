@@ -32,7 +32,7 @@
                 android:textSize="20sp" />
 
             <RatingBar
-                android:id="@+id/rateTeaching"
+                android:id="@+id/rateTeaching1"
                 android:layout_width="240dp"
                 android:layout_height="45dp"
                 android:layout_alignStart="@+id/textView"
@@ -41,55 +41,58 @@
                 android:stepSize="0.5"
                 android:theme="@style/RatingBar" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView4"
-                android:layout_below="@+id/rateTeaching"
-                android:layout_marginTop="10dp"
-                android:text="Teaching2"
-                android:textSize="20sp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/rateTeaching1"
+        android:layout_marginTop="10dp"
+        android:text="Communication"
+        android:textSize="20sp" />
 
             <RatingBar
-                android:id="@+id/ratingBar"
+                android:id="@+id/rateTeaching2"
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
+                android:theme="@style/RatingBar"
                 android:layout_alignStart="@+id/textView2"
                 android:layout_below="@+id/textView2" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/ratingBar"
-                android:layout_marginStart="11dp"
-                android:layout_marginTop="10dp"
-                android:text="Teaching3"
-                android:textSize="20sp" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rateTeaching2"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="10dp"
+        android:text="Knowledge"
+        android:textSize="20sp" />
 
             <RatingBar
-                android:id="@+id/ratingBar3"
+                android:id="@+id/rateTeaching3"
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
+                android:theme="@style/RatingBar"
                 android:layout_alignStart="@+id/textView4"
                 android:layout_below="@+id/textView4" />
 
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView4"
-                android:layout_below="@+id/ratingBar3"
-                android:layout_marginTop="10dp"
-                android:text="Teaching4"
-                android:textSize="20sp" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/rateTeaching3"
+        android:layout_marginTop="10dp"
+        android:text="Behaviour"
+        android:textSize="20sp" />
 
             <RatingBar
-                android:id="@+id/ratingBar4"
+                android:id="@+id/rateTeaching4"
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
+                android:theme="@style/RatingBar"
                 android:layout_alignStart="@+id/textView5"
                 android:layout_below="@+id/textView5" />
 
@@ -97,18 +100,28 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/ratingBar4"
-        android:layout_below="@+id/ratingBar4"
+        android:layout_alignStart="@+id/rateTeaching4"
+        android:layout_below="@+id/rateTeaching4"
         android:layout_marginTop="17dp"
-        android:text="Teaching5"
+        android:text="Polularity"
         android:textSize="20sp" />
 
     <RatingBar
-        android:id="@+id/ratingBar7"
+        android:id="@+id/rateTeaching5"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
-        android:layout_below="@+id/textView11"
-        android:layout_alignStart="@+id/textView11" />
+        android:theme="@style/RatingBar"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_below="@+id/textView11" />
+
+    <Button
+        android:id="@+id/rateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="13dp"
+        android:text="Save" />
 
 
     <!--</RelativeLayout>-->

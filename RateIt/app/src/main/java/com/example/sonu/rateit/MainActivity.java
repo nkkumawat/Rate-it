@@ -1,5 +1,6 @@
 package com.example.sonu.rateit;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,11 +25,14 @@ public class MainActivity extends AppCompatActivity {
     String url ;
     private RecyclerView TeachersData;
     private teachersAdapter mAdapter;
+    private ProgressDialog progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        url = "https://api.github.com/users/codepath";
+        progress=new ProgressDialog(this);
+        progress.setMessage("Loading ...");
         url = "http://nkkumawat.me/rateit/selectData.php";
         try {
             run();
@@ -39,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     void run() throws IOException {
 
         OkHttpClient client = new OkHttpClient();
-
+        progress.show();
         Request request = new Request.Builder()
                 .url(url)
                 .build();
@@ -61,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 });
-
             }
         });
     }
@@ -87,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
 //                Toast.makeText(getApplicationContext() , teachers.nameOfTeacher + teachers.department + teachers.phone , Toast.LENGTH_LONG).show();
             }
 //             Setup and Handover data to recyclerview
+            progress.dismiss();
             TeachersData = (RecyclerView)findViewById(R.id.fishPriceList);
             mAdapter = new teachersAdapter(getApplicationContext(), data);
             TeachersData.setAdapter(mAdapter);
@@ -94,11 +98,27 @@ public class MainActivity extends AppCompatActivity {
 
         }
         catch (JSONException e) {
-            for(int i = 0 ; i < 5 ; i++)
-            Toast.makeText(MainActivity.this, e.toString(), Toast.LENGTH_LONG).show();
-
+            progress.dismiss();
+            Toast.makeText(MainActivity.this, "Check you Internet Connection", Toast.LENGTH_LONG).show();
         }
-
+    }
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        try {
+            run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        try {
+            run();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

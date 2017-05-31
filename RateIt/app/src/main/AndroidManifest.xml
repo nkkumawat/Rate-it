@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".saparateView" />
-        <activity android:name=".rateTeacher"></activity>
+        <activity android:name=".rateTeacher" />
+        <activity android:name=".login"></activity>
     </application>
 
 </manifest>
