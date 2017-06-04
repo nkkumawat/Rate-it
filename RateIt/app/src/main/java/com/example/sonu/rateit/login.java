@@ -99,7 +99,6 @@ public class login extends AppCompatActivity {
                 login.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-
 //                        Toast.makeText(getApplicationContext() , myResponse , Toast.LENGTH_LONG).show();
                     logMeIn(myResponse);
 

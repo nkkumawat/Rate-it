@@ -45,7 +45,8 @@ public class home extends AppCompatActivity
     private ProgressDialog progress;
     ImageView profilePic;
     DBHandler db;
-    TextView userName , userEmail;
+    TextView userName , userEmail , branchTextView;
+    String myDepartment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,14 +96,17 @@ public class home extends AppCompatActivity
 
         userName = (TextView)headerView.findViewById(R.id.userName);
         userEmail = (TextView)headerView.findViewById(R.id.userEmail);
+        branchTextView = (TextView) headerView.findViewById(R.id.branchTextView);
         db = new DBHandler(this);
         int i = db.getUser();
         if(i > 0) {
             userName.setText(db.getDataName(1));
             userEmail.setText(db.getEmail(1));
+            myDepartment = db.getDataDepartment(1);
+            branchTextView.setText(myDepartment);
+            url = "http://nkkumawat.me/rateit/selectData.php?department="+myDepartment;
         }
     }
-
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -186,7 +190,6 @@ public class home extends AppCompatActivity
             }
         });
     }
-
     public void  setAdapter(String result){
         List<teachersData> data=new ArrayList<>();
         try {
@@ -218,7 +221,7 @@ public class home extends AppCompatActivity
         }
         catch (JSONException e) {
             progress.dismiss();
-            Toast.makeText(home.this, "Check you Internet Connection", Toast.LENGTH_LONG).show();
+//            Toast.makeText(home.this, "Check you Internet Connection", Toast.LENGTH_LONG).show();
         }
     }
     @Override

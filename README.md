@@ -10,7 +10,7 @@ Picasso
 
 ```
 
-##Other Tools used
+## Other Tools used
 ```bash
 import.io (scraping data from nit website)
 ```
