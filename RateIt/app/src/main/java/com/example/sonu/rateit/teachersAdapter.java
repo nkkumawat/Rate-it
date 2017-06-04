@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -62,6 +61,7 @@ public class teachersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
         Picasso.with(context)
                 .load(current.picture)
+                .fit().centerInside()
                 .placeholder(R.drawable.loading)
                 .error(R.drawable.placeholder)
                 .into(myHolder.picture);
@@ -92,7 +92,7 @@ public class teachersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         public MyHolder(View itemView) {
             super(itemView);
             teacherName= (TextView) itemView.findViewById(R.id.teacherName);
-            picture= (ImageView) itemView.findViewById(R.id.profilePic);
+            picture= (ImageView) itemView.findViewById(R.id.profilePic1);
             star= (ImageView) itemView.findViewById(R.id.star);
             qualification = (TextView) itemView.findViewById(R.id.qualification);
 //            phoneNo = (TextView) itemView.findViewById(R.id.phoneNo);

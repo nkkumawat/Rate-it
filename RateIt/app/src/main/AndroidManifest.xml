@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,13 @@
         </activity>
         <activity android:name=".saparateView" />
         <activity android:name=".rateTeacher" />
-        <activity android:name=".login"></activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".departmentwiseSort" />
+        <activity android:name=".signup"/>
     </application>
 
 </manifest>

@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    style="@style/Apptheme1"
     android:layout_height="match_parent"
     tools:context="com.example.sonu.rateit.login">
     <RelativeLayout
@@ -9,29 +10,73 @@
         android:layout_height="match_parent">
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/emailEd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="121dp"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/squrebox"
             android:ems="10"
+            android:hint="Email"
             android:inputType="textEmailAddress"
+            android:padding="10dp"
             tools:layout_editor_absoluteX="54dp"
-            tools:layout_editor_absoluteY="89dp" />
+            tools:layout_editor_absoluteY="89dp"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/passEd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/editText"
-            android:layout_below="@+id/editText"
-            android:layout_marginLeft="20dp"
+            android:layout_alignStart="@+id/emailEd"
+            android:layout_below="@+id/emailEd"
+            android:layout_marginLeft="0dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="53dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/squrebox"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/passEd"
+            android:layout_below="@+id/passEd"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/colorPrimary"
+            android:text="Sign Up"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/signup"
+            android:layout_alignBottom="@+id/signup"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/signup"
+            android:background="@color/colorPrimary"
+            android:text="LOgin"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="52dp"
+            android:text="Welcome"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
     </RelativeLayout>
+
 </RelativeLayout>

@@ -5,15 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.sonu.rateit.saparateView">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true">
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/border"
             android:paddingBottom="40dp">
 
@@ -26,7 +29,7 @@
                 android:layout_marginLeft="5dp"
                 android:text="Loading..."
                 android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+
                 android:textColor="#666"
                 android:textSize="29sp" />
 
@@ -40,7 +43,7 @@
                 android:layout_marginLeft="5dp"
                 android:text="loading.."
                 android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+
                 android:textColor="#666"
                 android:textSize="22sp" />
 
@@ -53,7 +56,7 @@
                 android:layout_marginLeft="5dp"
                 android:text="loading..."
                 android:textAlignment="center"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+
                 android:textColor="#666"
                 android:textSize="22sp" />
 
@@ -77,6 +80,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:contentDescription="TODO"
                 app:srcCompat="@drawable/loading" />
 
             <TextView
@@ -141,8 +145,62 @@
                 android:layout_alignEnd="@+id/profilePic1"
                 android:text="loading..." />
 
+            <RelativeLayout
+                android:id="@+id/sendLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/points1"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/border"
+                android:paddingBottom="10dp">
+
+
+                <Button
+                    android:id="@+id/saveComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/commentsEditTect"
+                    android:layout_alignBottom="@+id/commentsEditTect"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="8dp"
+                    android:text="Save" />
+
+                <EditText
+                    android:id="@+id/commentsEditTect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_toStartOf="@+id/saveComment"
+                    android:background="@drawable/squrebox"
+                    android:ems="10"
+                    android:hint="Leave your comment"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pastComments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sendLayout"
+                android:layout_marginTop="10dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/pastCommentsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp" />
+
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
+
 
     </ScrollView>
 

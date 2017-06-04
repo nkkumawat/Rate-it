@@ -1,8 +1,11 @@
 package com.example.sonu.rateit;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RatingBar;
@@ -19,8 +22,9 @@ import okhttp3.Response;
 public class rateTeacher extends AppCompatActivity {
     RatingBar rTeaching1,rTeaching2,rTeaching3,rTeaching4,rTeaching5;
     public float rating1 = 0 , rating2 = 0, rating3 =0 , rating4 = 0, rating5 = 0;
-    Button rateButton;
+//    Button rateButton;
     public float resultant= 0;
+    private ProgressDialog progress;
     String id;
     public String url = "http://nkkumawat.me/rateit/ratethenumber.php";
     @Override
@@ -32,13 +36,17 @@ public class rateTeacher extends AppCompatActivity {
 
         id = bundle.getString("id");
 
+        progress=new ProgressDialog(this);
+        progress.setMessage("Saving ...");
+        progress.setCancelable(false);
+
 
         rTeaching1 = (RatingBar) findViewById(R.id.rateTeaching1);
         rTeaching2 = (RatingBar) findViewById(R.id.rateTeaching2);
         rTeaching3 = (RatingBar) findViewById(R.id.rateTeaching3);
         rTeaching4 = (RatingBar) findViewById(R.id.rateTeaching4);
         rTeaching5 = (RatingBar) findViewById(R.id.rateTeaching5);
-        rateButton = (Button) findViewById(R.id.rateButton);
+//        rateButton = (Button) findViewById(R.id.rateButton);
 
         rTeaching1.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
@@ -65,20 +73,21 @@ public class rateTeacher extends AppCompatActivity {
                 rating5 = rating;
             }
         });
-        rateButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                resultant = rating1 + rating2 + rating3 + rating4 + rating5;
-                try {
-                    run();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+//        rateButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                resultant = rating1 + rating2 + rating3 + rating4 + rating5;
+//                try {
+//                    run();
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });
     }
     void run() throws IOException {
         url = "http://nkkumawat.me/rateit/ratethenumber.php?id="+id+"&&rating="+resultant;
+        progress.show();
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(url)
@@ -95,11 +104,31 @@ public class rateTeacher extends AppCompatActivity {
                 rateTeacher.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
+                        progress.dismiss();
                         finish();
                     }
                 });
 
             }
         });
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.tick, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.save: {
+                resultant = rating1 + rating2 + rating3 + rating4 + rating5;
+                try {
+                    run();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

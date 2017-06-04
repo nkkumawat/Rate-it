@@ -16,7 +16,7 @@
         android:id="@+id/teacherName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/profilePic"
+        android:layout_below="@+id/profilePic1"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="5dp"
         android:text="Teacher Name"
@@ -52,7 +52,7 @@
         android:textSize="22sp" />
 
     <ImageView
-        android:id="@+id/profilePic"
+        android:id="@+id/profilePic1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

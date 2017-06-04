@@ -4,8 +4,8 @@
 
     <!-- "Mark Favorite", should appear as action button if possible -->
     <item
-        android:id="@+id/rateme"
-        android:icon="@drawable/rate"
+        android:id="@+id/save"
+        android:icon="@drawable/tick"
         android:title="RateIT"
         app:showAsAction="ifRoom"
         android:checkable="true"/>
