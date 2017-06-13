@@ -2,6 +2,7 @@ package com.example.sonu.rateit;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.Collections;
@@ -44,11 +46,11 @@ public class teachersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     // Bind data
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(final RecyclerView.ViewHolder holder, final int position) {
 
         // Get current position of item in recyclerview to bind data and assign values from list
-        MyHolder myHolder= (MyHolder) holder;
-        teachersData current=data.get(position);
+        final MyHolder myHolder= (MyHolder) holder;
+        final teachersData current=data.get(position);
         myHolder.teacherName.setText(current.nameOfTeacher);
         myHolder.qualification.setText(current.qualification);
         myHolder.department.setText(current.department);
@@ -64,7 +66,22 @@ public class teachersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 .fit().centerInside()
                 .placeholder(R.drawable.loading)
                 .error(R.drawable.placeholder)
-                .into(myHolder.picture);
+                .into(myHolder.picture, new Callback() {
+            @Override
+            public void onSuccess() {
+
+            }
+            @Override
+            public void onError() {
+                // Try again online if cache failed
+                Picasso.with(context)
+                        .load(current.picture)
+                        .fit().centerInside()
+                        .placeholder(R.drawable.loading)
+                        .error(R.drawable.placeholder)
+                        .into(myHolder.picture);
+            }
+        });
         Picasso.with(context)
                 .load(R.drawable.star)
                 .placeholder(R.drawable.star)

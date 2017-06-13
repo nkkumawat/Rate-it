@@ -7,7 +7,7 @@
         android:id="@+id/rateme"
         android:icon="@drawable/rate"
         android:title="RateIT"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
         android:checkable="true"/>
 
 

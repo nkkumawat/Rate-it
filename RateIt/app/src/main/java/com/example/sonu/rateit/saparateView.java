@@ -1,9 +1,11 @@
 package com.example.sonu.rateit;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -53,7 +55,7 @@ public class saparateView extends AppCompatActivity {
     EditText commentsText;
     Button saveComment;
     String commentsString;
-    String NameOfUser;
+    String NameOfUser , EmailOfUser;
     DBHandler db;
     private ProgressDialog progress;
     @Override
@@ -97,17 +99,19 @@ public class saparateView extends AppCompatActivity {
 
 
         db = new DBHandler(this);
+        EmailOfUser = db.getEmail(1);
 
         saveComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                progress.show();
+//                progress.show();
                 commentsString = commentsText.getText().toString();
                 int i = db.getUser();
                 if(i > 0) {
                     NameOfUser = db.getDataName(1);
+
                 }
-                commentsText.setText("");
+                commentsText.setText("Submitting...");
                 try {
                     run2();
                 } catch (IOException e) {
@@ -203,9 +207,15 @@ public class saparateView extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.rateme: {
-                Intent intent = new Intent(getApplicationContext() , rateTeacher.class);
-                intent.putExtra("id" , id);
-                startActivity(intent);
+
+
+                try {
+                    run3();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
 //                finish();
                 return true;
             }
@@ -223,6 +233,73 @@ public class saparateView extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    void run3() throws IOException {
+        OkHttpClient client = new OkHttpClient();
+//        progress.show();
+//        url1 = "http://nkkumawat.me/rateit/selectsingleData.php?teacherid="+id;
+        url1 = "http://nkkumawat.me/rateit/checkRateStatus.php?teaid="+id+"&email="+EmailOfUser;
+        Request request = new Request.Builder()
+                .url(url1)
+                .build();
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                call.cancel();
+            }
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                final String myResponse = response.body().string();
+
+                saparateView.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+//                        Toast.makeText(getApplicationContext() , myResponse , Toast.LENGTH_LONG).show();
+//                        setAdapter(myResponse);
+
+                        try {
+                            JSONObject jsonObject = new JSONObject(myResponse);
+                            int i  = jsonObject.getInt("status");
+                          if(i == 0) {
+                              Intent intent = new Intent(getApplicationContext() , rateTeacher.class);
+                              intent.putExtra("id" , id);
+                              intent.putExtra("email" ,EmailOfUser);
+                              startActivity(intent);
+                          }
+                          else {
+                              showAlert();
+                          }
+
+
+                        }
+                        catch (JSONException e) {
+//            progress.dismiss();
+//            Toast.makeText(saparateView.this, e.toString(), Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                });
+            }
+        });
+    }
+
+public void showAlert() {
+    AlertDialog.Builder alertDialog = new AlertDialog.Builder(saparateView.this);
+        alertDialog.setTitle("Not permitted");
+    alertDialog.setCancelable(false);
+        alertDialog.setPositiveButton("OK",
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int which) {
+                   dialog.dismiss();
+                }
+            }
+        );
+        alertDialog.show();
+}
+
+
+
     void run1() throws IOException {
 
         OkHttpClient client = new OkHttpClient();
@@ -300,13 +377,11 @@ public class saparateView extends AppCompatActivity {
             }
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-
                 final String myResponse = response.body().string();
-
                 saparateView.this.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        progress.dismiss();
+                        commentsText.setText("");
                         onResume();
 //                        Toast.makeText(getApplicationContext() , myResponse , Toast.LENGTH_LONG).show();
 //                        setAdapter(myResponse);

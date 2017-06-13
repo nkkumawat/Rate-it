@@ -13,6 +13,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
+
     <ImageView
         android:id="@+id/profilePic1"
         android:layout_width="58dp"
@@ -21,7 +22,7 @@
         app:srcCompat="@drawable/avatar" />
 
     <TextView
-        android:id="@+id/userName"
+        android:id="@+id/userName1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
@@ -29,13 +30,13 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
     <TextView
-        android:id="@+id/userEmail"
+        android:id="@+id/userEmail1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Loading..." />
 
     <TextView
-        android:id="@+id/branchTextView"
+        android:id="@+id/branchTextView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Loading..." />

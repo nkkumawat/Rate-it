@@ -151,6 +151,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/points1"
                 android:layout_marginTop="30dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:background="@drawable/border"
                 android:paddingBottom="10dp">
 
@@ -163,22 +165,25 @@
                     android:layout_alignBottom="@+id/commentsEditTect"
                     android:layout_alignParentEnd="true"
                     android:layout_marginRight="8dp"
-                    android:text="Save" />
+                    android:background="@color/colorPrimary"
+                    android:text="Save"
+                    android:textColor="@android:color/white" />
 
                 <EditText
                     android:id="@+id/commentsEditTect"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginEnd="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginLeft="0dp"
                     android:layout_toStartOf="@+id/saveComment"
                     android:background="@drawable/squrebox"
                     android:ems="10"
-                    android:hint="Leave your comment"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
+                    android:hint="Leave your comment"
                     android:inputType="textMultiLine"
-                    android:padding="10dp" />
+                    android:padding="12dp" />
             </RelativeLayout>
 
             <RelativeLayout

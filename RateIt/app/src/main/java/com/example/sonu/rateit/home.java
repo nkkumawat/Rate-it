@@ -60,28 +60,10 @@ public class home extends AppCompatActivity
         progress.setCancelable(false);
 
 
-
-//        Picasso.with(home.this).load(R.drawable.avatar).into(profilePic);
-
         url = "http://nkkumawat.me/rateit/selectData.php";
         urlHalf = "http://nkkumawat.me/rateit/sortByDepartment.php";
-        try {
-            run();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
 
-
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -97,6 +79,7 @@ public class home extends AppCompatActivity
         userName = (TextView)headerView.findViewById(R.id.userName);
         userEmail = (TextView)headerView.findViewById(R.id.userEmail);
         branchTextView = (TextView) headerView.findViewById(R.id.branchTextView);
+        profilePic = (ImageView) headerView.findViewById(R.id.profilePic1);
         db = new DBHandler(this);
         int i = db.getUser();
         if(i > 0) {
@@ -104,7 +87,18 @@ public class home extends AppCompatActivity
             userEmail.setText(db.getEmail(1));
             myDepartment = db.getDataDepartment(1);
             branchTextView.setText(myDepartment);
+            Picasso.with(this)
+                    .load(db.getDataPicture(1))
+                    .fit().centerInside()
+                    .placeholder(R.drawable.loading)
+                    .error(R.drawable.placeholder)
+                    .into(profilePic);
             url = "http://nkkumawat.me/rateit/selectData.php?department="+myDepartment;
+        }
+        try {
+            run();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     @Override
@@ -117,27 +111,50 @@ public class home extends AppCompatActivity
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.grid_icon, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.gridView: {
+                startActivity(new Intent(home.this , gridviewNavigationDrawer.class));
+                finish();
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.computer) {
-            startIntentActivity("computer");
+            url = "http://nkkumawat.me/rateit/selectData.php?department=computer";
+            onResume();
         }else if (id == R.id.information) {
-            startIntentActivity("computer");
+            url = "http://nkkumawat.me/rateit/selectData.php?department=computer";
+            onResume();
         } else if (id == R.id.electical) {
-            startIntentActivity("electrical");
+            url = "http://nkkumawat.me/rateit/selectData.php?department=electrical";
+            onResume();
         } else if (id == R.id.electronics) {
-            startIntentActivity("electronics");
+            url = "http://nkkumawat.me/rateit/selectData.php?department=electronics";
+            onResume();
         } else if (id == R.id.civil) {
-            startIntentActivity("civil-comming soon...");
+            url = "http://nkkumawat.me/rateit/selectData.php?department=electronics";
+            onResume();
         } else if (id == R.id.mechenical) {
-            startIntentActivity("mechenical");
+            url = "http://nkkumawat.me/rateit/selectData.php?department=mechenical";
+            onResume();
         } else if (id == R.id.logout) {
+
             logout();
         }
 
@@ -148,20 +165,8 @@ public class home extends AppCompatActivity
 
     public void logout() {
         db.deleteAll();
-        startActivity(new Intent(home.this , login.class));
+        startActivity(new Intent(home.this, login.class));
     }
-
-
-
-    public void startIntentActivity(String department) {
-        Intent intent = new Intent(home.this , departmentwiseSort.class);
-        intent.putExtra("url" , department);
-        startActivity(intent);
-    }
-
-
-
-
     void run() throws IOException {
 
         OkHttpClient client = new OkHttpClient();

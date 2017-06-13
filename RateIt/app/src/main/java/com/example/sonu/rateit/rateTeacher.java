@@ -25,21 +25,24 @@ public class rateTeacher extends AppCompatActivity {
 //    Button rateButton;
     public float resultant= 0;
     private ProgressDialog progress;
-    String id;
+    String id, emailOfUser;
     public String url = "http://nkkumawat.me/rateit/ratethenumber.php";
+    public String url1 = "http://nkkumawat.me/rateit/ratethenumber.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rate_teacher);
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
+        if(bundle != null) {
+            id = bundle.getString("id");
+            emailOfUser = bundle.getString("email");
+        }
 
-        id = bundle.getString("id");
 
         progress=new ProgressDialog(this);
         progress.setMessage("Saving ...");
         progress.setCancelable(false);
-
 
         rTeaching1 = (RatingBar) findViewById(R.id.rateTeaching1);
         rTeaching2 = (RatingBar) findViewById(R.id.rateTeaching2);
@@ -86,11 +89,43 @@ public class rateTeacher extends AppCompatActivity {
 //        });
     }
     void run() throws IOException {
-        url = "http://nkkumawat.me/rateit/ratethenumber.php?id="+id+"&&rating="+resultant;
+        url = "http://nkkumawat.me/rateit/ratethenumber.php?id="+id+"&rating="+resultant;
         progress.show();
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(url)
+                .build();
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                call.cancel();
+            }
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                final String myResponse = response.body().string();
+
+                rateTeacher.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            run3();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+
+            }
+        });
+    }
+
+
+    void run3() throws IOException {
+        url1 = "http://nkkumawat.me/rateit/insertRating.php?teaid="+id+"&email="+emailOfUser;
+        progress.show();
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url(url1)
                 .build();
         client.newCall(request).enqueue(new Callback() {
             @Override
@@ -112,6 +147,9 @@ public class rateTeacher extends AppCompatActivity {
             }
         });
     }
+
+
+
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.tick, menu);
         return true;

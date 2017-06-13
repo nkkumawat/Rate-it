@@ -26,7 +26,12 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".departmentwiseSort" />
-        <activity android:name=".signup"/>
+        <activity android:name=".signup" />
+        <activity
+            android:name=".gridviewNavigationDrawer"
+            android:label="@string/title_activity_gridview_navigation_drawer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".departmentInsert"></activity>
     </application>
 
 </manifest>

@@ -4,22 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/AppTheme.NoActionBar"
+    android:background="@color/colorPrimary"
     tools:context="com.example.sonu.rateit.signup">
 
-    <EditText
-        android:id="@+id/name"
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/materialTextField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="0dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/squrebox"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:padding="10dp" />
+        android:layout_marginTop="50dp"
+        app:mtf_image="@drawable/email"
+        app:mtf_openKeyboardOnFocus="true">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textColor="#333"
+            android:textColorHint="#666"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/materialTextField2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/materialTextField"
+        android:layout_marginLeft="10dp"
+        app:mtf_openKeyboardOnFocus="true"
+        android:layout_marginRight="10dp"
+        app:mtf_image="@drawable/email">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textColor="#333"
+            android:textColorHint="#666"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
 
     <TextView
         android:id="@+id/textView"
@@ -29,65 +62,73 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="Sign Up"
-        android:textColor="@color/colorPrimary"
-        android:textSize="25sp"
+
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
         android:textStyle="bold|italic" />
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="22dp"
-        android:background="@drawable/squrebox"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        android:textColor="@android:color/background_dark" />
+    <!--<com.github.florent37.materialtextfield.MaterialTextField-->
+        <!--android:id="@+id/materialTextField3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignStart="@+id/materialTextField2"-->
+        <!--android:layout_below="@+id/materialTextField2"-->
+        <!--android:layout_marginLeft="0dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--app:mtf_image="@drawable/email"-->
+        <!--app:mtf_openKeyboardOnFocus="true">-->
 
     <android.support.v7.widget.AppCompatSpinner
         android:id="@+id/department"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/email"
-        android:layout_marginLeft="10dp"
+        android:layout_alignStart="@+id/materialTextField2"
+        android:layout_below="@+id/materialTextField2"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="22dp"
-        android:background="@drawable/squrebox"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/squre_fill_white"
         android:hint="Department"
-        android:padding="12dp"
+        android:padding="17dp"
         android:textColor="@android:color/darker_gray">
 
     </android.support.v7.widget.AppCompatSpinner>
 
-    <EditText
-        android:id="@+id/passwordSignup"
+    <!--</com.github.florent37.materialtextfield.MaterialTextField>-->
+
+    <com.github.florent37.materialtextfield.MaterialTextField
+        android:id="@+id/materialTextField4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/department"
-        android:layout_centerHorizontal="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/squrebox"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="10dp" />
+        android:layout_marginTop="8dp"
+        app:mtf_image="@drawable/email"
+        app:mtf_openKeyboardOnFocus="true">
+
+        <EditText
+            android:id="@+id/passwordSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textColor="#333"
+            android:textColorHint="#666"
+            android:textSize="15sp" />
+
+    </com.github.florent37.materialtextfield.MaterialTextField>
+
 
     <Button
         android:id="@+id/loginMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/passwordSignup"
-        android:layout_marginTop="24dp"
-        android:layout_toStartOf="@+id/textView"
-        android:background="@color/colorPrimary"
+        android:layout_alignStart="@+id/materialTextField4"
+        android:layout_below="@+id/materialTextField4"
+
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/squrebox"
         android:text="Login"
         android:textColor="@android:color/background_light" />
 
@@ -97,7 +138,7 @@
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/loginMe"
         android:layout_toEndOf="@+id/textView"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/squrebox"
         android:text="Signup"
         android:textColor="@android:color/background_light" />
 

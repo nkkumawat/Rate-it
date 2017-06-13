@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "134043628754",
+    "project_id": "rate-it-45a86"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134043628754:android:5569c6b6314413f4",
+        "android_client_info": {
+          "package_name": "com.example.sonu.rateit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134043628754-6v4uqqce2fh1bomslu80sb0d89j4pdnb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sonu.rateit",
+            "certificate_hash": "304712b06fb8e5cf564de70c35cb758d39c726e4"
+          }
+        },
+        {
+          "client_id": "134043628754-kcj7cdcn337cg6sag6k6ngajs5c01neo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADFLE3lEZ81fAWtAupKdSpi9nifx2Rk0c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
