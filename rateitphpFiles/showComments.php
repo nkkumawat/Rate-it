@@ -1,10 +1,10 @@
 <?php
-require 'createDataBase.php';
-
-$department = urldecode($_GET['department']);
+require 'createCommentsDataBase.php';
 
 
-$sql = "SELECT * FROM rateitteachersData WHERE department='$department' ORDER BY points DESC";
+$teacherid=urldecode($_GET['teacherid']);
+
+$sql = "SELECT * FROM commentsrateit WHERE teacherid= '$teacherid' ORDER BY id DESC";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

@@ -1,0 +1,232 @@
+[
+ {
+   "department": "computer",
+   "name": "Rajesh Kumar Aggarwal (Head of Department)",
+   "designation": "Associate Professor",
+   "qualification": "PhD(NIT Kurukshetra), 2014",
+   "experience": "Speech Processing, Pattern Recognition & M/CLearning, Soft Computing, Stastistical Modeling, Science & Spirituality",
+   "phone": "01744-233483, 233259, 233479",
+   "email": "rka15969@gmail.com",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1494401285R.K.Aggarwal.JPG"
+ },
+ {
+   "department": "computer",
+   "name": "Mayank Dave",
+   "designation": "Professor",
+   "qualification": "Ph.D (2002, IIT Roorkee), Senior Member IEEE",
+   "experience": "Latest Topic of Interest: System and Network Security; Other Areas of Interest: Cyber Security, Cloud Security, Key Management, Wireless Sensor Networks, Underwater Sensor Networks, Semantic Web, Mobile Computing",
+   "phone": "01744-233480",
+   "email": "mdave@nitkkr.ac.in m.dave@ieee.org",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1494585987Photo%20MD%202016.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Jitender Kumar Chhabra",
+   "designation": "Professor",
+   "qualification": "M.Tech(Computer Engg) from NITK as Gold Medalist",
+   "experience": " B.Tech (Computer Engg) from NITK(earlier RECK) as 2nd Topper",
+   "phone": " PhD (S/w Engg) with 8 international journal publications from thesis.",
+   "email": "Areas of Interest: Programming in C, Object oriented programming in C++, Data Structures, Software Design & Development, Software Engineering & Project Development, Operating Systems Data Bases, Object Oriented Systems, Software Testing.; Research Activities: Software Metrics, Software Engineering, Data Mining, Soft Computing, Algorithms & related areas",
+   "picture": "jitenderchhabra@nitkkr.ac.in"
+ },
+ {
+   "department": "computer",
+   "name": "Sanjay Kumar Jain",
+   "designation": "Professor",
+   "qualification": "PhD 2006 MNNIT, Allahabad",
+   "experience": "Database design, data models, database schema management, data integration, dataspace, conceptual modeling, semantic web, requirements engineering. Research activities: To supervise and produce high quality M Tech and PhD theses in addition to B Tech projects.",
+   "phone": "01744 -233490",
+   "email": "skj_nith@yahoo.com",
+   "picture": "http://nitkkr.ac.in/admin/member_images/sanjay.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Awadhesh Kumar Singh",
+   "designation": "Professor",
+   "qualification": "PhD (Engineering), Jadavpur University Kolkata, Year 2004",
+   "experience": "Distributed Computing Systems, Concurrent Algorithms, Mobile Computing",
+   "phone": "233481 (Off.) 09416570992",
+   "email": "aksingh@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/awadesh.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Rajeev Mohan Sharma",
+   "designation": "Associate Professor",
+   "qualification": "PhD (Specialisation in Computer Networks) 2014 KuK, M.Tech.(Computer Engg) 1998 , B.Tech(HBTI Kanpur))",
+   "experience": "Computer Communication Networks, Computer organization",
+   "phone": "233484",
+   "email": "rmsharma123@rediffmail.com",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1494332716R.M.Sharma.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Virender Ranga",
+   "designation": "Assistant Professor",
+   "qualification": "Ph.D. (NIT Kurukshetra, 2016)",
+   "experience": "Wireless Adhoc & Sensor Networks, Machine Learning Techniques in Networking, Flying Adhoc Sensor Networks (FANeTs), Security issues in Cloud Computing & IoT, Soft Computing techniques",
+   "phone": "919416158283",
+   "email": "virender.ranga@nitkkr.ac.in, virendersinghmtech@gmail.com",
+   "picture": "http://nitkkr.ac.in/admin/member_images/149525122513681036_10202187128596263_2542717606411861318_n.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Priyanka Ahlawat",
+   "designation": "Assistant Professor",
+   "qualification": "PhD(Pursuing) NIT Kurukshetra, M.Tech.(CSE) 2006 Guru Jambeshwar University of Science and Technology, Hissar B.Tech CSE, 2003 with hons.(MDU, Rohtak)",
+   "experience": "Computer Networks, Key management, Wireless sensor networks, Information security, Cryptography",
+   "phone": "01744-233493",
+   "email": "mannpammy@gmail.com priyankaahlawat@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1495017471IMG_0004.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Mohit Dua",
+   "designation": "Assistant Professor",
+   "qualification": "Ph.D Purusuing (NIT Kurukshetra), M.Tech (NIT Kurukshetra), B.Tech (KUK) with Hons.",
+   "experience": "Speech Processing, Pattern Recognition, Image Processing, Natural Language Processing, Soft Computing, Cryptography",
+   "phone": "+91-1744-233479",
+   "email": "er.mohitdua@gmail.com er.mohitdua@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/mohit.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Ritu Garg",
+   "designation": "Assistant Professor",
+   "qualification": "PhD (NIT Kurukshetra)2016, M.Tech(M.M.E.C, Mullana) 2006, B.Tech(B.C.E.T, Gurdaspur)2001",
+   "experience": "Grid Computing, Cloud Computing, Evolutionary Computing",
+   "phone": "01744-233493",
+   "email": "ritu.59@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1494334001ritu.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Vikram Singh",
+   "designation": "Assistant Professor",
+   "qualification": "Ph.D. (Pursuing) NIT Kurukshetra, M.Tech. (Hons., SC&SS JNU New Delhi) 2009, B.E.(Hons., UIT RGPV, Bhopal (M.P)) 2006",
+   "experience": "Database System, Exploratory Search, Text Mining & Big Data Analytics; Current Research Activities: Data Exploration, Flexible Query Answering(FQA), Social Media Analytics",
+   "phone": "01744-233479, 8816086589",
+   "email": "viks@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/Vikram%20Singh(comp).jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Gyanendra Kumar Verma",
+   "designation": "Assistant Professor",
+   "qualification": "Ph.D.(IIIT Allahabad) 2016 ::: M. Tech.(IIIT Allahabad) 2009 ::: B. Tech. (H.B.T.I. Kanpur) 2006 (All in Information Technology)",
+   "experience": "Affective Computing ::: Digital Image Processing and Computer Vision ::: Medical Imaging ::: Natural Language Processing ::: Biometrics ::: Speech Processing ::: Human Computer Interaction....for more detail please visit www.gkverma.in",
+   "phone": "01744-233530 ::: 7404210632",
+   "email": "gyanendra@ieee.org ::: gyanendra@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/Gyanendra%20Kumar%20Verma%20(comp).jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Mahendra Kumar Murmu",
+   "designation": "Assistant Professor",
+   "qualification": "Ph. D. (Pursuing) NIT, Kurukshetra, M. Tech. (ISM, Dhanbad) 2011, B. Sc. Engg. (BIT, Sindri) 2008",
+   "experience": "Wireless Network, Distributed Computing, Mobile Computing, Cognitive Radio Network",
+   "phone": "8950118619",
+   "email": "mkmurmu@nitkkr.ac.in, mkmurmu9@gmail.com",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1494382004murmu.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "B. B. Gupta",
+   "designation": "Assistant Professor",
+   "qualification": "PhD (IIT Roorkee)",
+   "experience": "Information security, Cyber Security, Intrusion detection, Cloud Security, Mobile Security, Web Security, Big data analytics, Botnet Detection, Phishing, DDoS attacks, and Network Performance Evaluation",
+   "phone": "233-479",
+   "email": "bbgupta@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1495647279brij-final.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Vijay Verma",
+   "designation": "Assistant Professor",
+   "qualification": "Ph.D.(Pursuing) NIT Kurukshetra, M.Tech. (IIT Roorkee), B.Tech. (BIET Jhansi)",
+   "experience": "Data Mining, Recommender Systems, Collaborative Filtering,Java/J2ee Technologies",
+   "phone": "Ph: 01744-233479",
+   "email": "vermavijay1986@gmail.com , vermavijay@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/vijay_verma.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Ankit Kumar Jain",
+   "designation": "Assistant Professor",
+   "qualification": "PhD (Pursuing), NIT Kurukshetra, M.Tech (IIIT Allahabad) B.Tech (RGPV Bhopal)",
+   "experience": "Cyber and Web Security, Mobile Security, Machine Learning, Computer Networks",
+   "phone": "01744-233489",
+   "email": "ankit.jain2407@gmail.com, ankitjain@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1494342337ankit1.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Anoop Kumar Patel",
+   "designation": "Assistant Professor",
+   "qualification": "PhD (NIT Kurukshetra), M.Tech(MNNIT Allahabad, UP) 2011, B.Tech.(Computer Science and Engineering)2009.",
+   "experience": "Image Processing, Medical Imaging, Algorithms and Data Structure, Computational theory",
+   "phone": "8950459580",
+   "email": "anooppatelk@gmail.com , akp@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1494342693anoop.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Chandra Bhim Bhan Singh",
+   "designation": "Assistant Professor",
+   "qualification": "Phd (NIT Kurukshetra)2014-present, M.Tech (IIIT Allahabad)2012, B.Tech (IIIT Allahabad)2007",
+   "experience": "Cognition, Intelligent System, Soft Computing",
+   "phone": "1744233489",
+   "email": "bhimbhan@gmail.com, cbsingh@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/387213_2.JPG"
+ },
+ {
+   "department": "computer",
+   "name": "Mantosh Biswas",
+   "designation": "Assistant Professor",
+   "qualification": "Ph.D (ISM Dhanbad)",
+   "experience": "Digital Signal Processing, Digital Image Processing, X-lets, Soft-Computing",
+   "phone": "01744-233489",
+   "email": "mantoshb@gmail.com, mantoshbiswas@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/man.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Santosh Kumar",
+   "designation": "Assistant Professor",
+   "qualification": "PhD (Pursuing) NIT Kurukshetra, M.Tech (CSE), NIT JALANDHAR B.Tech (CSE), Institute of Engineering and Technology, Lucknow",
+   "experience": "Programming in C, C++, Data Structure, Computer Network, Mobile Computing",
+   "phone": "01744-233479",
+   "email": "santosh.cse@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1494400721santosh.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Bharati Sinha",
+   "designation": "Assistant Professor",
+   "qualification": "PhD (Pursuing) NIT Kurukshetra, M.Tech (NIT Rourkela)",
+   "experience": "Operating Systems, Distributed Systems, Computer Networks",
+   "phone": "",
+   "email": "bharatisinhanitk@gmail.com",
+   "picture": "http://nitkkr.ac.in/admin/member_images/bharatiphoto.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Kriti Bhushan",
+   "designation": "Assistant Professor",
+   "qualification": "M.Tech, PhD (Pursuing)",
+   "experience": "Information Security ( Cloud Security, Privacy Preserving in Data Publishing ), Computer Networks, Wireless Sensor Network",
+   "phone": "",
+   "email": "kriti.nitr@gmail.com, kritibhushan@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1494436601Kriti%20Bhushan.jpg"
+ },
+ {
+   "department": "computer",
+   "name": "Syed Taqi Ali",
+   "designation": "Assistant Professor (On Long Contract)",
+   "qualification": "Ph.D (CSE) - NIT Warangal, Telengana (2014) M.Tech (CSE - Information Security) - NITK Surathkal, Karnataka (2009)",
+   "experience": "Information Security and Cryptography, Public Key Cryptography, Attribute Based Cryptography, Provable Security and Algorithms.",
+   "phone": "",
+   "email": "taqiali110@gmail.com, staa@nitkkr.ac.in",
+   "picture": "http://nitkkr.ac.in/admin/member_images/1488189680Syedtaqi.jpg"
+ }
+]
