@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sonu.rateit.saparateView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:id="@+id/teacherName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profilePic1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:text="Loading..."
+                android:textAlignment="center"
+
+                android:textColor="#666"
+                android:textSize="29sp" />
+
+            <TextView
+                android:id="@+id/qualification1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/teacherName1"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:text="loading.."
+                android:textAlignment="center"
+
+                android:textColor="#666"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/phoneNo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:text="loading..."
+                android:textAlignment="center"
+
+                android:textColor="#666"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/email1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/qualification1"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="loading..."
+                android:textAlignment="center"
+                android:textColor="#666"
+                android:textSize="22sp" />
+
+            <ImageView
+                android:id="@+id/profilePic1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/loading" />
+
+            <TextView
+                android:id="@+id/experience1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneNo1"
+                android:layout_centerHorizontal="true"
+                android:text="loading..."
+                android:textAlignment="center"
+                android:textColor="#666"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/points1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/star1"
+                android:layout_alignTop="@+id/star1"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/star1"
+                android:paddingLeft="5dp"
+                android:paddingTop="4dp"
+                android:text="loading..."
+                android:textColor="#666" />
+
+            <TextView
+                android:id="@+id/about1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/experience1"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="loading..."
+                android:textAlignment="center"
+                android:textColor="#666" />
+
+            <TextView
+                android:id="@+id/id1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_above="@+id/teacherName1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="119dp" />
+
+            <ImageView
+                android:id="@+id/star1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/about1"
+                android:layout_marginBottom="4dp"
+                app:srcCompat="@drawable/star" />
+
+            <TextView
+                android:id="@+id/department1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/star1"
+                android:layout_alignEnd="@+id/profilePic1"
+                android:text="loading..." />
+
+            <RelativeLayout
+                android:id="@+id/sendLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/points1"
+                android:layout_marginTop="30dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/border"
+                android:paddingBottom="10dp">
+
+
+                <Button
+                    android:id="@+id/saveComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/commentsEditTect"
+                    android:layout_alignBottom="@+id/commentsEditTect"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Save"
+                    android:textColor="@android:color/white" />
+
+                <EditText
+                    android:id="@+id/commentsEditTect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_toStartOf="@+id/saveComment"
+                    android:background="@drawable/squrebox"
+                    android:ems="10"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Leave your comment"
+                    android:inputType="textMultiLine"
+                    android:padding="12dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/pastComments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sendLayout"
+                android:layout_marginTop="10dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/pastCommentsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingTop="10dp" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

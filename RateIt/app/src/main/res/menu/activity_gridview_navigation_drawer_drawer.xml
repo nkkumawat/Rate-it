@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <item android:title="Branch">
+        <menu>
+            <item
+                android:id="@+id/computer"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Computer Engg." />
+            <item
+                android:id="@+id/information"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Informational Tech." />
+            <item
+                android:id="@+id/electical"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Electrical" />
+            <item
+                android:id="@+id/electronics"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Electronics" />
+            <item
+                android:id="@+id/civil"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Civil" />
+            <item
+                android:id="@+id/mechenical"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Mechenical" />
+        </menu>
+    </item>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/topfile"
+            android:icon="?android:attr/actionModePasteDrawable"
+            android:title="Top Five Teachers" />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="Logout" />
+    </group>
+
+</menu>
